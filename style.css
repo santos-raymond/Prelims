@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -14,7 +15,8 @@
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 .15rem .5rem rgba(163, 163, 163, 0.5);
+    backdrop-filter: blur(.125rem);
 }
 
 nav ul{
@@ -50,7 +52,6 @@ li a::before{
 
 li a:hover::before{
     width: 100%;
-    
 }
 
 /* Main */
