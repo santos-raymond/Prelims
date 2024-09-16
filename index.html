@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raymond Santos</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header>
         <section class="header-section">
-            <h1>Raymond Santos</h1>
+            <h1><a href="#me">Raymond Santos</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#me" class="active">Me</a></li>
+                    <li><a href="#me" class="active">Home</a></li>
                     <li><a href="#objective">Objective</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#hobby">Hobby</a></li>
@@ -25,18 +26,77 @@
     </header>
 
     <main>
-        <section class="main-section" id="me">
-            <h2>Me</h2>
+        <section class="main-section me" id="me">
+            <div class="wrapper">
+                <div class="img">
+                    <img src="/img/me.png" alt="">
+                </div>
+                <div class="text-holder">
+                    <div class="text">
+                        <h2>Raymond Santos</h2>
+                        <hr>
+                        <p>Bachelor of Science in Information Technology Student</p>
+                    </div>
+
+                    <div class="info">
+                        <div class="title">
+                            <span>Address</span>
+                            <span>Birthday</span>
+                            <span>Age</span>
+                            <span>Status</span>
+                            <span>Sex</span>
+                            <span>Nationality</span>
+                        </div>
+                        <div class="divider">
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                        </div>
+                        <div class="info-txt">
+                            <p>Cenon Perez St. Bonga Menor, Bustos, Bulacan</p>
+                            <p>April 13, 2000</p>
+                            <p>24</p>
+                            <p>Single</p>
+                            <p>Male</p>
+                            <p>Filipino</p>
+                        </div>
+
+                    </div>
+                    <div class="social-media">
+                        <div class="connect">
+                            <i class='bx bx-link'></i>
+                        </div>
+                        <div class="links">
+                            <a href="">
+                                <i class='bx bxl-gmail'></i>
+                            </a>
+                            <a href="">
+                                <i class='bx bxl-facebook-circle'></i>
+                            </a>
+                            <a href="">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section class="main-section" id="objective">
             <h2>Objective</h2>
         </section>
+
         <section class="main-section" id="education">
             <h2>Education</h2>
         </section>
+
         <section class="main-section" id="hobby">
             <h2>Hobby</h2>
         </section>
+
         <section class="main-section" id="contact">
             <h2>Contact Me</h2>
         </section>
@@ -45,7 +105,7 @@
     <footer></footer>
 
     <script>
-        const links = document.querySelectorAll("li a");
+        const links = document.querySelectorAll("a");
 
         links.forEach(link => {
             link.addEventListener('click', addClass);
