@@ -86,13 +86,12 @@ li a:hover::before {
 .main-section {
     height: 100dvh;
     padding: 5rem 1rem 1rem 1rem;
-    transition: .5s;
     background: rgb(250, 250, 250);
     color: white;
 }
 
+/* Home */
 .main-section.me {
-    /* background: aqua; */
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -115,9 +114,6 @@ li a:hover::before {
     background: white;
     border: .125rem solid #424242;
     box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-timing-function: ease;
 }
 
 .wrapper .img img {
@@ -141,10 +137,6 @@ li a:hover::before {
     width: 0;
     right: 0;
     height: 70dvh;
-    animation-name: left2right;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-    z-index: 1;
 }
 
 .wrapper .text-holder .text{
@@ -231,12 +223,66 @@ li a:hover::before {
     text-shadow: .125rem .125rem .0625rem rgba(0, 0, 0, 0.5);
 }
 
-@keyframes left2right{
-    from {width: 100%;}
-    to {width: 0;}
+/* Education */
+.education{
+    background-color: #ffffff;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
-@keyframes slide{
-    0%{transform: scale(0);}
-    100%{transform: scale(1);}
+.education .wrapper{
+    background: #424242;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .educ-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+.educ-info .educ-container{
+    width: 80%;
+    height: 20%;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    color: #424242;
+    display: flex;
+    text-align: center;
+}
+
+.educ-info .educ-container .school{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+} 
+
+.school h4:nth-of-type(1) {
+    width: 20%;
+    text-align: left;
+}
+.school h4:nth-of-type(2){
+    width: 35%;
+    text-align: left;
+}
+.school h4:nth-of-type(3){
+    width: 15%;
+    text-align: left;
+}
+
+.school span{
+    font-weight: 700;
 }
