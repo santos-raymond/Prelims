@@ -128,15 +128,7 @@ li a:hover::before {
     height: 30dvw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-.wrapper .text-holder::before{
-    position: absolute;
-    content: "";
-    background-color: #424242;
-    width: 0;
-    right: 0;
-    height: 70dvh;
+    gap: 3rem;
 }
 
 .wrapper .text-holder .text{
@@ -344,3 +336,6 @@ li a:hover::before {
 .img-holder i{
     font-size: 10rem;
 }
+
+/* Contact */
+

@@ -64,7 +64,7 @@
                         </div>
 
                     </div>
-                    <div class="social-media">
+                    <!-- <div class="social-media">
                         <div class="connect">
                             <i class='bx bx-link'></i>
                         </div>
@@ -79,7 +79,7 @@
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -172,15 +172,26 @@
     <script>
         const links = document.querySelectorAll("a");
 
+        window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        
         links.forEach(link => {
-            link.addEventListener('click', addClass);
+            const sectionId = link.getAttribute('href');
+            const targetSection = document.querySelector(sectionId);
+            
+            if (targetSection) {
+                const sectionTop = targetSection.offsetTop;
+                const sectionBottom = sectionTop + targetSection.offsetHeight;
+
+                if (scrollPosition >= sectionTop - viewportHeight / 2 && scrollPosition < sectionBottom - viewportHeight / 2) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
         });
-
-        function addClass(click) {
-            links.forEach(link => link.classList.remove('active'));
-
-            click.target.classList.add('active');
-        }
+    });
     </script>
 
 </body>
